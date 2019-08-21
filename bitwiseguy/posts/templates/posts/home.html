@@ -1,0 +1,54 @@
+{%extends 'posts/base.html'%}
+
+<body>
+{% block header %}
+		    <header class="hero">
+			    <img src="{{ settings.display_picture.url }}" alt="">
+			    <p>Hi! I'm Elias. A programmer, fucking around on my little space on the internetz...</p>
+			    <div class="links">
+				    <a href=""><span class="fa fa-github-square" /></a>
+				    <a href=""><span class="fa fa-linkedin-square" /></a>
+				    <a href=""><span class="fa fa-twitter-square" /></a>
+				    <a href=""><span class="fa fa-instagram" /></a>
+				   
+			    </div>
+			    <nav class="navbar">
+				<li><a href="">Blog</a></li>
+				<li><a href="">Projects</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+			    </nav>
+		    </header>
+		
+{% endblock %}
+<main>
+{% block main%}
+	{% for article in published_articles %}
+
+		<article class="post">
+
+			<div class="post-header">
+			<img src="https://unsplash.it/700/200" alt={{article.title}}/>
+				<h1>{{article.tags}}<span></span></h1>
+			</div>
+			<header>
+				<h1 class="post-title"><a href={% url 'posts:detail' article.slug%}>{{article.title}}</a></h1>
+			</header>
+			<small class="post-timestamp">{{article.pub_date}}</small>
+			<div class="post-content">{{article.content | slice:":150" | safe}} ...</div>
+			<div class="read-more">
+			<a href={% url 'posts:detail' article.slug%} >Read More &nbsp; </a>
+			<span class="fa fa-arrow-right">
+			</div>
+			</span>
+		</article>
+
+	{% endfor %}
+{% endblock %}
+</main>
+</body>
+
+
+
+
+

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Poppins:500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+li, a{
+	text-decoration: none;
+	list-style-type: none;
+	color: white;
+}
+
+
+body{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family:'Poppins', Arial, sans-serif;
+	background-color: #2A2A2A;
+	display: grid;
+	grid-template-columns: 15% 50% 20% 15%;
+}
+
+.navbar{
+	display: inline-flex;
+	justify-content: center;
+	bottom: 100px;
+	z-index: 999;
+	top: 300px;
+	font-size: 1.5em;
+	width: 30%;
+	margin: 1% 1% 0 1%;
+}
+
+.navbar li{
+	position: relative;
+	text-align: center;
+	margin: 0 5% 0 5%;
+}
+
+
+.navbar a:hover{
+	cursor: pointer;
+}
+
+.navbar a::after{
+	position: absolute;
+	bottom: 0;	
+	left: 0;
+	content: "";
+	width: 0%;
+	border-bottom: 3px solid #dd403a;
+	transition: all ease-out 0.5s;
+}
+
+.navbar a:hover::after{
+	height: 1px;
+	content: "";
+	display: inline-block;
+	width: 100%;
+	background-color: #dd403a;
+	transition: all ease 0.5s;
+}
+
+.small-nav{
+	grid-column: 1/5;
+	position: fixed;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	z-index: 999;
+	height: 50px;
+	background-color: #2A2A2A;
+	margin-bottom: 5%;
+	background-size: cover;
+	background-image: url("blah.jpg");
+	-webkit-box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+		transition: all ease 0.5s;
+}
+
+.small-nav .links{
+	order: -1;
+}
+
+.links{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 2rem;
+	width: 30%;
+}
+
+.links a{
+	text-align: center;
+	font-size: 1.2em;
+	margin: 1%;
+	transition: all ease 0.7s;
+}
+
+.links a:hover{
+	color: #FF403A;
+	transition: all fade 0.7s;
+}
+
+
+
+.nav-form{
+	display: flex;	
+}
+
+.nav-form input{
+	width: 50%;
+}
+
+.nav-form button{
+	background-color: #448AFF;
+	border-radius: 50px;
+	border: none;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	padding: 2%;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+footer{
+	grid-column: 1/5;
+	border: 1px solid black;
+}
+
+.hero img{
+	border: 4px solid white;
+	width: 150px;
+	height: 150px;
+	background-color: lightgrey;
+	border-radius: 50%;
+	margin-bottom: 1%;
+}
+
+.hero{
+	grid-column: 1/5;
+	display: flex;
+	position: fixed;
+	width: 100%;
+	height: 400px;
+	z-index: 999;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url("../../sitesettings/hero2.webp");
+	-webkit-box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+box-shadow: 0px 6px 10px 4px rgba(0,0,0,0.55);
+		transition: all ease 0.5s;
+
+}
+
+.hero p{
+	font-size: 1.2em;
+	text-shadow: 1px 1px #000000;
+	text-align: center;
+	color: white;
+	width: 30%;
+}
+
+.shrink img, .shrink p, .shrink .links{
+	display: none;
+	transition: all ease 1s;
+}
+
+.hero.shrink{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		height: 50px;
+		background-color: #2A2A2A;
+		transition: all ease 1s;
+}
+
+.secondary, main{
+	margin-top: 430px;
+}
+
+main{
+	grid-column: 2/3;
+}
+
+.secondary{
+	grid-column: 3/4;
+	color: white;
+	padding: 4% 2% 2% 2%;
+	margin-left: 10%;
+}
+
+.secondary h1{
+	padding: 0 0 2% 2%;
+	border-bottom: 4px solid #ff403a;
+}
+
+
+.post{
+		margin-bottom: 5%;
+		position: relative;
+		background-color: #1A1A1A;
+		color: white;
+}
+
+.post small{
+	font-size: 1.2rem;
+}
+
+.post-header{
+	position: relative;
+}
+
+.post-header img{
+	width: 100%;
+}
+
+.post-header h1{
+	position: absolute;
+	top: -10%;
+	left: 2%;
+	padding: 1% 7% 1% 1%;
+	border-left: 4px solid white;
+	background-color: #ff403a;
+	font-size: 1.3em;
+}
+
+.post-content{
+	max-width: 80%;
+	margin-top: 1%;
+	padding: 1%;
+}
+
+.post-timestamp{
+	padding: 1%;
+}
+
+.post-title{
+	font-size: 3em;
+	margin: 0 auto 0 auto;
+	padding: 1%;
+}
+
+.post-title a:hover{
+	color: #ff403a;
+	cursor: pointer;
+}
+
+.read-more{
+	background-color: #ff403a;
+	font-family: 'Poppins';
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 1%;
+}

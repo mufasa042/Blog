@@ -1,0 +1,9 @@
+<h1> Compose Article </h1> <br>
+
+<form method = 'POST'>
+{% csrf_token %}
+{{form.media}}
+{{form.as_p}}
+<input type=submit value=Publish>
+</form>
+

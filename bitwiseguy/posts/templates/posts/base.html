@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% block head %}
+	<meta charset="utf-8" />
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> The Bitwise Guy </title>
+	<script src={% static 'jquery/dist/jquery.min.js' %}></script>
+	<script src={% static 'posts/js/heroScroll.js' %}></script>
+	{% block stylesheets %}
+		<link rel="stylesheet" type="text/css" media="screen and (min-width:900px)" href={% static 'posts/css/main.css' %}/>
+		<link rel="stylesheet" href={% static 'font-awesome/css/font-awesome.min.css'  %}>
+	{% endblock %}
+	{% endblock %}
+</head>
+<body>
+		{% block header %}
+		    <header class="hero">
+			    <div class="links">
+				    <a href=""> <span class="fa fa-github" /> </a>
+				    <a href=""> <span class="fa fa-instagram" /> </a>
+				    <a href=""> <span class="fa fa-linkedin-square" /> </a>
+				   
+			    </div>
+			    <nav class="navbar">
+				<li><a href="">Blog</a></li>
+				<li><a href="">Projects</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+			    </nav>
+		    </header>
+		{% endblock %}
+
+	<main>
+	{% block main %}
+	{% endblock %}
+	</main>
+		<aside class="secondary">
+	{% block secondary %}
+			<h1>Contact Me</h1>
+			<form class="contact">
+			{{contact_form}}
+			</form>
+	{% endblock %}
+		</aside>
+
+{% block footer %}
+	<footer>
+		<p>the_bitwise_guy &copy;</p>
+	</footer>
+{% endblock %}
+	
+</body>
+</html>
+
+
+
